@@ -35,10 +35,6 @@ navigationLinks.forEach(function (link) {
 
 });
 
-// =========================
-// Image Lightbox
-// =========================
-
 const clickableImages = document.querySelectorAll(
     ".gallery-image, .support-image"
 );
