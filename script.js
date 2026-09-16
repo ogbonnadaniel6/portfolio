@@ -48,27 +48,19 @@ const lightboxImage = document.getElementById("lightbox-image");
 const lightboxClose = document.getElementById("lightbox-close");
 
 clickableImages.forEach(function (image) {
-
     image.addEventListener("click", function () {
-
         lightboxImage.src = image.src;
         lightboxImage.alt = image.alt;
-
         lightbox.classList.add("active");
     });
-
 });
 
 lightboxClose.addEventListener("click", function () {
-
     lightbox.classList.remove("active");
-
 });
 
 lightbox.addEventListener("click", function (event) {
-
     if (event.target === lightbox) {
         lightbox.classList.remove("active");
     }
-
 });

@@ -265,7 +265,7 @@ section h2 {
    Support Experience
 ========================= */
 
-#support-experience {
+#impact {
     background-color: #f5f5f5;
     max-width: none;
     padding-left: max(20px, calc((100% - 1100px) / 2));
@@ -334,6 +334,15 @@ section h2 {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 0;
+}
+
+.dashboard-note1 {
+    color: #777;
+    font-size: 14px;
+    margin: 15px 0 0;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
 }
 
 /* =========================
@@ -746,45 +755,78 @@ footer {
     .metric-card h3 {
         font-size: 24px;
     }
+
+    /* Project Gallery on Mobile */
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* All screenshots */
+    ..project-gallery img:nth-child(1),
+    .project-gallery img:nth-child(2),
+    .project-gallery img:nth-child(3),
+    .project-gallery img:nth-child(4) {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+
 }
 
 /* =========================
    Image Lightbox
 ========================= */
 
-.lightbox {
-    display: none;
+#lightbox {
+    display: none !important;
     position: fixed;
-    z-index: 2000;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
     background-color: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     padding: 30px;
 }
 
-.lightbox.active {
-    display: flex;
+#lightbox.active {
+    display: flex !important;
 }
 
-.lightbox img {
+#lightbox img {
     max-width: 95%;
     max-height: 90vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 5px;
 }
 
-.lightbox-close {
+#lightbox .lightbox-close {
     position: absolute;
     top: 20px;
     right: 30px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
     color: white;
     font-size: 40px;
+    line-height: 1;
     cursor: pointer;
-    background: none;
-    border: none;
 }
 
-.gallery-image {
-    cursor: pointer;
+/* Clickable images */
+
+.project-gallery .gallery-image,
+.support-image {
+    cursor: zoom-in;
 }
