@@ -764,7 +764,7 @@ footer {
     }
 
     /* All screenshots */
-    ..project-gallery img:nth-child(1),
+    .project-gallery img:nth-child(1),
     .project-gallery img:nth-child(2),
     .project-gallery img:nth-child(3),
     .project-gallery img:nth-child(4) {
